@@ -1,0 +1,33 @@
+{
+  "name": "discord-smtp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "prettier --check '**/*.ts' '**/*.json' '**/*.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore",
+    "lint:fix": "prettier --write '**/*.ts' '**/*.json' '**/*.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore",
+    "start": "tsx --watch ./src/index.ts"
+  },
+  "dependencies": {
+    "loglevel": "^1.9.1",
+    "mailparser": "^3.7.1",
+    "smtp-server": "^3.13.4"
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^3.2.0",
+    "@lavamoat/preinstall-always-fail": "^2.1.0",
+    "@types/mailparser": "^3",
+    "@types/smtp-server": "^3.5.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-packagejson": "^2.5.2",
+    "tsx": "^4.18.0",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "yarn@4.4.1",
+  "lavamoat": {
+    "allowScripts": {
+      "@lavamoat/preinstall-always-fail": false,
+      "tsx>esbuild": true
+    }
+  }
+}
